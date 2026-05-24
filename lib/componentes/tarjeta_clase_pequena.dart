@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../theme.dart';
 
 class TarjetaClasePequena extends StatelessWidget {
@@ -26,7 +26,7 @@ class TarjetaClasePequena extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: isActive ? AppColors.accent.withOpacity(0.3) : const Color(0xFF1E2128)),
+        border: Border.all(color: isActive ? AppColors.accent.withOpacity(0.3) : const Color(0x332A9D8F)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,7 +35,7 @@ class TarjetaClasePequena extends StatelessWidget {
             children: [
               Icon(Icons.circle, color: dotColor, size: 8),
               const SizedBox(width: 8),
-              Expanded(child: Text(title, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis)),
+              Expanded(child: Text(title, style: const TextStyle(color: AppColors.textPrimary, fontWeight: FontWeight.bold), overflow: TextOverflow.ellipsis)),
             ],
           ),
           const SizedBox(height: 8),
@@ -54,7 +54,7 @@ class TarjetaClasePequena extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
-                  color: isActive ? AppColors.accent.withOpacity(0.1) : const Color(0xFF1E2128),
+                  color: isActive ? AppColors.accent.withOpacity(0.1) : const Color(0x332A9D8F),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Text(
@@ -69,3 +69,5 @@ class TarjetaClasePequena extends StatelessWidget {
     );
   }
 }
+
+

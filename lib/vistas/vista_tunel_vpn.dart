@@ -56,7 +56,7 @@ class _VistaTunelVpnState extends State<VistaTunelVpn> {
         const Center(
           child: Text(
             'IronLink NET',
-            style: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold, letterSpacing: -0.5),
+            style: TextStyle(color: AppColors.textPrimary, fontSize: 28, fontWeight: FontWeight.bold, letterSpacing: -0.5),
           ),
         ),
         const SizedBox(height: 64),
@@ -138,7 +138,7 @@ class _VistaTunelVpnState extends State<VistaTunelVpn> {
                 });
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: _isConnected ? const Color(0xFF3D1616) : AppColors.accent.withOpacity(0.15), 
+                backgroundColor: _isConnected ? Colors.red.shade100 : AppColors.accent.withOpacity(0.15), 
                 side: BorderSide(color: _isConnected ? Colors.transparent : AppColors.accent),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
               ),
@@ -161,9 +161,9 @@ class _VistaTunelVpnState extends State<VistaTunelVpn> {
             width: 400,
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: const Color(0xFF0F1518),
+              color: AppColors.surface,
               borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: const Color(0xFF162B3D)),
+              border: Border.all(color: const Color(0x332A9D8F)),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -193,7 +193,7 @@ class _VistaTunelVpnState extends State<VistaTunelVpn> {
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: const Color(0xFF1E2128)),
+        border: Border.all(color: const Color(0x332A9D8F)),
       ),
       child: Column(
         children: [
@@ -224,16 +224,16 @@ class _VistaTunelVpnState extends State<VistaTunelVpn> {
         const Text('INFORMACIÓN DE CONEXIÓN', style: TextStyle(color: AppColors.textTertiary, fontSize: 11, fontWeight: FontWeight.bold, letterSpacing: 1.5)),
         const SizedBox(height: 16),
         _buildInfoRow('IP privada', _isConnected ? '10.8.0.45' : '-', _isConnected ? AppColors.accent : AppColors.textTertiary),
-        const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0xFF1E2128), height: 1)),
-        _buildInfoRow('IP pública', _isConnected ? '186.45.12.99' : '-', _isConnected ? Colors.white : AppColors.textTertiary),
-        const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0xFF1E2128), height: 1)),
+        const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0x332A9D8F), height: 1)),
+        _buildInfoRow('IP pública', _isConnected ? '186.45.12.99' : '-', _isConnected ? AppColors.textPrimary : AppColors.textTertiary),
+        const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0x332A9D8F), height: 1)),
         _buildInfoRow('Protocolo', _isConnected ? 'WireGuard' : '-', _isConnected ? AppColors.accent : AppColors.textTertiary),
-        const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0xFF1E2128), height: 1)),
+        const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0x332A9D8F), height: 1)),
         _buildInfoRow('Encriptación', _isConnected ? 'AES-256-GCM' : '-', _isConnected ? AppColors.accent : AppColors.textTertiary),
-        const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0xFF1E2128), height: 1)),
-        _buildInfoRow('DNS', _isConnected ? '10.8.0.1' : '-', _isConnected ? Colors.white : AppColors.textTertiary),
-        const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0xFF1E2128), height: 1)),
-        _buildInfoRow('Tiempo conectado', _isConnected ? '18:34' : '-', _isConnected ? Colors.white : AppColors.textTertiary),
+        const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0x332A9D8F), height: 1)),
+        _buildInfoRow('DNS', _isConnected ? '10.8.0.1' : '-', _isConnected ? AppColors.textPrimary : AppColors.textTertiary),
+        const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0x332A9D8F), height: 1)),
+        _buildInfoRow('Tiempo conectado', _isConnected ? '18:34' : '-', _isConnected ? AppColors.textPrimary : AppColors.textTertiary),
 
         const SizedBox(height: 48),
 
@@ -255,7 +255,7 @@ class _VistaTunelVpnState extends State<VistaTunelVpn> {
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: isSelected ? AppColors.accent : const Color(0xFF1E2128), width: isSelected ? 2 : 1),
+        border: Border.all(color: isSelected ? AppColors.accent : const Color(0x332A9D8F), width: isSelected ? 2 : 1),
       ),
       child: Row(
         children: [
@@ -272,7 +272,7 @@ class _VistaTunelVpnState extends State<VistaTunelVpn> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold)),
+                Text(title, style: const TextStyle(color: AppColors.textPrimary, fontSize: 14, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 4),
                 Text(subtitle, style: const TextStyle(color: AppColors.textTertiary, fontSize: 11)),
               ],
@@ -301,7 +301,7 @@ class _VistaTunelVpnState extends State<VistaTunelVpn> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title, style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold)),
+            Text(title, style: const TextStyle(color: AppColors.textPrimary, fontSize: 14, fontWeight: FontWeight.bold)),
             const SizedBox(height: 4),
             Text(subtitle, style: const TextStyle(color: AppColors.textTertiary, fontSize: 11)),
           ],
@@ -310,9 +310,11 @@ class _VistaTunelVpnState extends State<VistaTunelVpn> {
           value: value,
           onChanged: onChanged,
           activeColor: AppColors.accent,
-          inactiveTrackColor: const Color(0xFF1E2128),
+          inactiveTrackColor: const Color(0x332A9D8F),
         ),
       ],
     );
   }
 }
+
+

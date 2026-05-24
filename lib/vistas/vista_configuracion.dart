@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../theme.dart';
 
 class VistaConfiguracion extends StatefulWidget {
@@ -69,15 +69,15 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Ajustes', style: TextStyle(color: Colors.white, fontSize: 32, fontWeight: FontWeight.bold)),
+            const Text('Ajustes', style: TextStyle(color: AppColors.textPrimary, fontSize: 32, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
             const Text('Personaliza tu experiencia IronLink', style: TextStyle(color: AppColors.textSecondary, fontSize: 14)),
           ],
         ),
         ElevatedButton.icon(
           onPressed: () {},
-          icon: const Icon(Icons.save, color: Colors.black, size: 18),
-          label: const Text('Guardar cambios', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+          icon: const Icon(Icons.save, color: Colors.white, size: 18),
+          label: const Text('Guardar cambios', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColors.accent,
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
@@ -93,7 +93,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFF1E2128)),
+        border: Border.all(color: const Color(0x332A9D8F)),
       ),
       padding: const EdgeInsets.symmetric(vertical: 16),
       child: Column(
@@ -184,13 +184,13 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
           const SizedBox(height: 48),
 
           _buildSwitchRow('Alerta antes de clase', 'Aviso 5 min antes de que inicie tu aula', _alertaClase, (val) => setState(() => _alertaClase = val)),
-          const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0xFF1E2128), height: 1)),
+          const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0x332A9D8F), height: 1)),
           _buildSwitchRow('Notificación de chat', 'Mensajes del docente y compañeros', _notifChat, (val) => setState(() => _notifChat = val)),
-          const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0xFF1E2128), height: 1)),
+          const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0x332A9D8F), height: 1)),
           _buildSwitchRow('Alertas de VPN', 'Avisar si el túnel se desconecta', _alertaVpn, (val) => setState(() => _alertaVpn = val)),
-          const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0xFF1E2128), height: 1)),
+          const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0x332A9D8F), height: 1)),
           _buildSwitchRow('Resumen semanal', 'Reporte de asistencia cada domingo', _resumenSemanal, (val) => setState(() => _resumenSemanal = val)),
-          const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0xFF1E2128), height: 1)),
+          const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0x332A9D8F), height: 1)),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -198,7 +198,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
               const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Tiempo de alerta', style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold)),
+                  Text('Tiempo de alerta', style: TextStyle(color: AppColors.textPrimary, fontSize: 14, fontWeight: FontWeight.bold)),
                   SizedBox(height: 4),
                   Text('¿Con cuántos minutos de anticipación?', style: TextStyle(color: AppColors.textTertiary, fontSize: 12)),
                 ],
@@ -206,11 +206,11 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF1A1C23),
+                  color: AppColors.surfaceLight,
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: const Color(0xFF2A2D35)),
+                  border: Border.all(color: const Color(0x332A9D8F)),
                 ),
-                child: const Text('5 minutos', style: TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold)),
+                child: const Text('5 minutos', style: TextStyle(color: AppColors.textPrimary, fontSize: 13, fontWeight: FontWeight.bold)),
               ),
             ],
           ),
@@ -235,7 +235,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
           const SizedBox(height: 48),
 
           _buildSwitchRow('Autoconectar VPN al iniciar', 'El túnel se activa automáticamente', _autoVpn, (val) => setState(() => _autoVpn = val)),
-          const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0xFF1E2128), height: 1)),
+          const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0x332A9D8F), height: 1)),
           _buildSwitchRow('Kill Switch', 'Corta el internet si VPN se cae', _killSwitch, (val) => setState(() => _killSwitch = val)),
           const SizedBox(height: 48),
 
@@ -256,15 +256,15 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: BoxDecoration(
-        color: const Color(0xFF171A21),
+        color: AppColors.surfaceLight,
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: bgColor == Colors.transparent ? const Color(0xFF1E2128) : statusColor.withOpacity(0.5)),
+        border: Border.all(color: bgColor == Colors.transparent ? const Color(0x332A9D8F) : statusColor.withOpacity(0.5)),
       ),
       child: Row(
         children: [
           Icon(Icons.circle, color: isOnline ? AppColors.accent : AppColors.textTertiary, size: 10),
           const SizedBox(width: 16),
-          Expanded(child: Text(title, style: TextStyle(color: isOnline ? Colors.white : AppColors.textTertiary, fontSize: 14, fontWeight: FontWeight.bold))),
+          Expanded(child: Text(title, style: TextStyle(color: isOnline ? AppColors.textPrimary : AppColors.textTertiary, fontSize: 14, fontWeight: FontWeight.bold))),
           Text(ping, style: TextStyle(color: statusColor, fontSize: 13, fontWeight: FontWeight.bold)),
           const SizedBox(width: 12),
           Container(
@@ -319,12 +319,12 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                   ],
                 ),
                 const SizedBox(height: 48),
-                _buildInfoRow('Versión', 'IronLink v2.1.4', Colors.white),
-                const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0xFF1E2128), height: 1)),
-                _buildInfoRow('Entorno', 'UGB Campus Central', Colors.white),
-                const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0xFF1E2128), height: 1)),
+                _buildInfoRow('Versión', 'IronLink v2.1.4', AppColors.textPrimary),
+                const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0x332A9D8F), height: 1)),
+                _buildInfoRow('Entorno', 'UGB Campus Central', AppColors.textPrimary),
+                const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0x332A9D8F), height: 1)),
                 _buildInfoRow('Protocolo VPN', 'WireGuard • AES-256', AppColors.textSecondary),
-                const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0xFF1E2128), height: 1)),
+                const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0x332A9D8F), height: 1)),
                 _buildInfoRow('Última sincronía', 'Hoy 09:52 AM', AppColors.accent),
                 const SizedBox(height: 32),
                 Row(
@@ -332,9 +332,9 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                     Expanded(
                       child: OutlinedButton.icon(
                         onPressed: () {},
-                        icon: const Icon(Icons.description, color: Colors.white, size: 16),
-                        label: const Text('Términos', style: TextStyle(color: Colors.white)),
-                        style: OutlinedButton.styleFrom(side: const BorderSide(color: Color(0xFF2A2D35))),
+                        icon: const Icon(Icons.description, color: AppColors.textPrimary, size: 16),
+                        label: const Text('Términos', style: TextStyle(color: AppColors.textPrimary)),
+                        style: OutlinedButton.styleFrom(side: const BorderSide(color: Color(0x332A9D8F))),
                       ),
                     ),
                     const SizedBox(width: 16),
@@ -342,8 +342,8 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                       child: OutlinedButton.icon(
                         onPressed: () {},
                         icon: const Icon(Icons.bug_report, color: Colors.amber, size: 16),
-                        label: const Text('Reportar', style: TextStyle(color: Colors.white)),
-                        style: OutlinedButton.styleFrom(side: const BorderSide(color: Color(0xFF2A2D35))),
+                        label: const Text('Reportar', style: TextStyle(color: AppColors.textPrimary)),
+                        style: OutlinedButton.styleFrom(side: const BorderSide(color: Color(0x332A9D8F))),
                       ),
                     ),
                   ],
@@ -363,7 +363,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title, style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold)),
+            Text(title, style: const TextStyle(color: AppColors.textPrimary, fontSize: 14, fontWeight: FontWeight.bold)),
             const SizedBox(height: 4),
             Text(subtitle, style: const TextStyle(color: AppColors.textTertiary, fontSize: 12)),
           ],
@@ -371,15 +371,15 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           decoration: BoxDecoration(
-            color: const Color(0xFF1A1C23),
+            color: AppColors.surfaceLight,
             borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: const Color(0xFF2A2D35)),
+            border: Border.all(color: const Color(0x332A9D8F)),
           ),
           child: Row(
             children: [
               Icon(Icons.circle, color: iconColor, size: 12),
               const SizedBox(width: 8),
-              Text(btnText, style: const TextStyle(color: Colors.white, fontSize: 13)),
+              Text(btnText, style: const TextStyle(color: AppColors.textPrimary, fontSize: 13)),
             ],
           ),
         ),
@@ -392,7 +392,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text('Seguridad de la cuenta', style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold)),
+        const Text('Seguridad de la cuenta', style: TextStyle(color: AppColors.textPrimary, fontSize: 24, fontWeight: FontWeight.bold)),
         const SizedBox(height: 8),
         const Text('Gestiona tus credenciales y accesos activos', style: TextStyle(color: AppColors.textTertiary, fontSize: 14)),
         const SizedBox(height: 32),
@@ -415,7 +415,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Correo electrónico', style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)),
+                                Text('Correo electrónico', style: TextStyle(color: AppColors.textPrimary, fontSize: 16, fontWeight: FontWeight.bold)),
                                 Text('Cambiar dirección de acceso', style: TextStyle(color: AppColors.textTertiary, fontSize: 12)),
                               ],
                             ),
@@ -426,7 +426,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                         const SizedBox(height: 8),
                         Container(
                           padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(color: const Color(0xFF171A21), borderRadius: BorderRadius.circular(8)),
+                          decoration: BoxDecoration(color: AppColors.surfaceLight, borderRadius: BorderRadius.circular(8)),
                           child: const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -446,7 +446,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                         const SizedBox(height: 8),
                         Container(
                           padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(color: const Color(0xFF171A21), borderRadius: BorderRadius.circular(8), border: Border.all(color: const Color(0xFF1E2128))),
+                          decoration: BoxDecoration(color: AppColors.surfaceLight, borderRadius: BorderRadius.circular(8), border: Border.all(color: const Color(0x332A9D8F))),
                           child: const Text('correo@nuevo.com', style: TextStyle(color: AppColors.textTertiary, fontSize: 14)),
                         ),
                         const SizedBox(height: 8),
@@ -456,8 +456,8 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                           width: double.infinity,
                           child: ElevatedButton.icon(
                             onPressed: () {},
-                            icon: const Icon(Icons.mail, color: Colors.black, size: 16),
-                            label: const Text('Enviar verificación', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+                            icon: const Icon(Icons.mail, color: Colors.white, size: 16),
+                            label: const Text('Enviar verificación', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                             style: ElevatedButton.styleFrom(backgroundColor: AppColors.accent, padding: const EdgeInsets.symmetric(vertical: 16)),
                           ),
                         ),
@@ -476,7 +476,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Verificación en dos pasos', style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)),
+                                Text('Verificación en dos pasos', style: TextStyle(color: AppColors.textPrimary, fontSize: 16, fontWeight: FontWeight.bold)),
                                 Text('Protección adicional de la cuenta', style: TextStyle(color: AppColors.textTertiary, fontSize: 12)),
                               ],
                             ),
@@ -511,7 +511,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Contraseña', style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)),
+                                Text('Contraseña', style: TextStyle(color: AppColors.textPrimary, fontSize: 16, fontWeight: FontWeight.bold)),
                                 Text('Actualizar clave de acceso', style: TextStyle(color: AppColors.textTertiary, fontSize: 12)),
                               ],
                             ),
@@ -522,7 +522,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                         const SizedBox(height: 8),
                         Container(
                           padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(color: const Color(0xFF171A21), borderRadius: BorderRadius.circular(8)),
+                          decoration: BoxDecoration(color: AppColors.surfaceLight, borderRadius: BorderRadius.circular(8)),
                           child: const Text('••••••••', style: TextStyle(color: AppColors.textSecondary, fontSize: 14)),
                         ),
                         const SizedBox(height: 24),
@@ -530,7 +530,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                         const SizedBox(height: 8),
                         Container(
                           padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(color: const Color(0xFF171A21), borderRadius: BorderRadius.circular(8), border: Border.all(color: const Color(0xFF1E2128))),
+                          decoration: BoxDecoration(color: AppColors.surfaceLight, borderRadius: BorderRadius.circular(8), border: Border.all(color: const Color(0x332A9D8F))),
                           child: const Text('Mínimo 8 caracteres', style: TextStyle(color: AppColors.textTertiary, fontSize: 14)),
                         ),
                         const SizedBox(height: 8),
@@ -540,7 +540,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                             const SizedBox(width: 4),
                             Expanded(child: Container(height: 4, color: Colors.amber)),
                             const SizedBox(width: 4),
-                            Expanded(child: Container(height: 4, color: const Color(0xFF2A2D35))),
+                            Expanded(child: Container(height: 4, color: const Color(0x332A9D8F))),
                           ],
                         ),
                         const SizedBox(height: 4),
@@ -550,7 +550,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                         const SizedBox(height: 8),
                         Container(
                           padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(color: const Color(0xFF171A21), borderRadius: BorderRadius.circular(8), border: Border.all(color: const Color(0xFF1E2128))),
+                          decoration: BoxDecoration(color: AppColors.surfaceLight, borderRadius: BorderRadius.circular(8), border: Border.all(color: const Color(0x332A9D8F))),
                           child: const Text('Repite la contraseña', style: TextStyle(color: AppColors.textTertiary, fontSize: 14)),
                         ),
                         const SizedBox(height: 32),
@@ -558,8 +558,8 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                           width: double.infinity,
                           child: ElevatedButton.icon(
                             onPressed: () {},
-                            icon: const Icon(Icons.lock_reset, color: Colors.black, size: 16),
-                            label: const Text('Actualizar contraseña', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+                            icon: const Icon(Icons.lock_reset, color: Colors.white, size: 16),
+                            label: const Text('Actualizar contraseña', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                             style: ElevatedButton.styleFrom(backgroundColor: AppColors.accent, padding: const EdgeInsets.symmetric(vertical: 16)),
                           ),
                         ),
@@ -581,7 +581,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text('Sesiones activas', style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)),
+                                    Text('Sesiones activas', style: TextStyle(color: AppColors.textPrimary, fontSize: 16, fontWeight: FontWeight.bold)),
                                     Text('Dispositivos con acceso a tu cuenta', style: TextStyle(color: AppColors.textTertiary, fontSize: 12)),
                                   ],
                                 ),
@@ -597,9 +597,9 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
                         ),
                         const SizedBox(height: 32),
                         _buildSessionItem(Icons.laptop_windows, 'Windows 11 • Chrome 124', 'San Salvador • Hace 2 min', true),
-                        const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0xFF1E2128), height: 1)),
+                        const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0x332A9D8F), height: 1)),
                         _buildSessionItem(Icons.phone_android, 'Android 14 • App IronLink', 'San Miguel • Hace 3 h', false),
-                        const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0xFF1E2128), height: 1)),
+                        const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0x332A9D8F), height: 1)),
                         _buildSessionItem(Icons.laptop_mac, 'macOS Sonoma • Safari 17', 'Usulután • Hace 1 día', false),
                       ],
                     ),
@@ -618,15 +618,15 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
       children: [
         Container(
           padding: const EdgeInsets.all(8),
-          decoration: BoxDecoration(color: const Color(0xFF171A21), borderRadius: BorderRadius.circular(8)),
-          child: Icon(icon, color: Colors.white, size: 20),
+          decoration: BoxDecoration(color: AppColors.surfaceLight, borderRadius: BorderRadius.circular(8)),
+          child: Icon(icon, color: AppColors.textPrimary, size: 20),
         ),
         const SizedBox(width: 16),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title, style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold)),
+              Text(title, style: const TextStyle(color: AppColors.textPrimary, fontSize: 14, fontWeight: FontWeight.bold)),
               const SizedBox(height: 2),
               Text(subtitle, style: const TextStyle(color: AppColors.textTertiary, fontSize: 11)),
             ],
@@ -647,7 +647,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFF1E2128)),
+        border: Border.all(color: const Color(0x332A9D8F)),
       ),
       child: child,
     );
@@ -671,7 +671,7 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title, style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold)),
+              Text(title, style: const TextStyle(color: AppColors.textPrimary, fontSize: 14, fontWeight: FontWeight.bold)),
               const SizedBox(height: 4),
               Text(subtitle, style: const TextStyle(color: AppColors.textTertiary, fontSize: 12)),
             ],
@@ -681,9 +681,11 @@ class _VistaConfiguracionState extends State<VistaConfiguracion> {
           value: value,
           onChanged: onChanged,
           activeColor: AppColors.accent,
-          inactiveTrackColor: const Color(0xFF1E2128),
+          inactiveTrackColor: const Color(0x332A9D8F),
         ),
       ],
     );
   }
 }
+
+

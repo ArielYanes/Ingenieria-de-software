@@ -55,13 +55,13 @@ class _PantallaLoginState extends State<PantallaLogin> {
   Widget _buildLeftPanel({double opacity = 1.0}) {
     return Container(
       decoration: BoxDecoration(
-        color: const Color(0xFF0D1015),
+        color: AppColors.surface,
         gradient: RadialGradient(
           center: const Alignment(-0.5, -0.5),
           radius: 1.5,
           colors: [
-            const Color(0xFF00FA9A).withOpacity(0.05 * opacity),
-            const Color(0xFF0D1015).withOpacity(opacity),
+            AppColors.accent.withOpacity(0.05 * opacity),
+            AppColors.surface.withOpacity(opacity),
           ],
         ),
       ),
@@ -72,23 +72,10 @@ class _PantallaLoginState extends State<PantallaLogin> {
         children: [
           Row(
             children: [
-              Container(
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: AppColors.accent,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: const Icon(Icons.link, color: Colors.black, size: 24),
-              ),
-              const SizedBox(width: 12),
-              const Text(
-                'IronLink',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: -0.5,
-                ),
+              Image.asset(
+                'assets/logo.png',
+                height: 120,
+                fit: BoxFit.contain,
               ),
             ],
           ),
@@ -99,7 +86,7 @@ class _PantallaLoginState extends State<PantallaLogin> {
                 fontSize: 48,
                 fontWeight: FontWeight.bold,
                 height: 1.2,
-                color: Colors.white,
+                color: AppColors.textPrimary,
               ),
               children: [
                 TextSpan(text: 'Conecta con\ntu '),
@@ -146,7 +133,7 @@ class _PantallaLoginState extends State<PantallaLogin> {
               children: [
                 TextSpan(
                   text: '$title — ',
-                  style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                  style: const TextStyle(color: AppColors.textPrimary, fontWeight: FontWeight.bold),
                 ),
                 TextSpan(text: desc),
               ],
@@ -174,7 +161,7 @@ class _PantallaLoginState extends State<PantallaLogin> {
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: AppColors.textPrimary,
                 ),
               ),
               const SizedBox(height: 8),
@@ -195,7 +182,7 @@ class _PantallaLoginState extends State<PantallaLogin> {
               ),
               const SizedBox(height: 8),
               TextField(
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(color: AppColors.textPrimary),
                 decoration: const InputDecoration(
                   hintText: 'SMSS042024',
                   hintStyle: TextStyle(color: AppColors.textTertiary),
@@ -216,7 +203,7 @@ class _PantallaLoginState extends State<PantallaLogin> {
               ),
               const SizedBox(height: 8),
               TextField(
-                style: const TextStyle(color: Colors.white),
+                style: const TextStyle(color: AppColors.textPrimary),
                 obscureText: _obscurePassword,
                 decoration: InputDecoration(
                   hintText: '••••••••',
@@ -252,7 +239,7 @@ class _PantallaLoginState extends State<PantallaLogin> {
                         });
                       },
                       activeColor: AppColors.accent,
-                      checkColor: Colors.black,
+                      checkColor: Colors.white,
                       side: const BorderSide(color: AppColors.textTertiary),
                     ),
                   ),
@@ -337,3 +324,5 @@ class _PantallaLoginState extends State<PantallaLogin> {
     );
   }
 }
+
+

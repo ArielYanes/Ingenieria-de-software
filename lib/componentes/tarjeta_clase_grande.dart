@@ -29,7 +29,7 @@ class TarjetaClaseGrande extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFF1E2128)),
+        border: Border.all(color: const Color(0x332A9D8F)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -63,7 +63,7 @@ class TarjetaClaseGrande extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                         decoration: BoxDecoration(
-                          color: isActive ? AppColors.accent.withOpacity(0.1) : const Color(0xFF1E2128),
+                          color: isActive ? AppColors.accent.withOpacity(0.1) : const Color(0x332A9D8F),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Row(
@@ -98,14 +98,14 @@ class TarjetaClaseGrande extends StatelessWidget {
                     ),
                     const SizedBox(height: 12),
                   ],
-                  Text(title, style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold), maxLines: 1, overflow: TextOverflow.ellipsis),
+                  Text(title, style: const TextStyle(color: AppColors.textPrimary, fontSize: 20, fontWeight: FontWeight.bold), maxLines: 1, overflow: TextOverflow.ellipsis),
                   const SizedBox(height: 4),
                   Text(subtitle, style: const TextStyle(color: AppColors.textTertiary, fontSize: 12), maxLines: 1, overflow: TextOverflow.ellipsis),
                   const Spacer(),
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF101217),
+                      color: AppColors.background,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Row(
@@ -152,7 +152,7 @@ class TarjetaClaseGrande extends StatelessWidget {
                                 label: const Text('Ver material', style: TextStyle(color: AppColors.textSecondary, fontWeight: FontWeight.bold)),
                                 style: OutlinedButton.styleFrom(
                                   padding: const EdgeInsets.symmetric(vertical: 14),
-                                  side: const BorderSide(color: Color(0xFF2A2D35)),
+                                  side: const BorderSide(color: Color(0x332A9D8F)),
                                 ),
                               ),
                       ),
@@ -161,7 +161,7 @@ class TarjetaClaseGrande extends StatelessWidget {
                         onPressed: () {},
                         style: OutlinedButton.styleFrom(
                           padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
-                          side: const BorderSide(color: Color(0xFF2A2D35)),
+                          side: const BorderSide(color: Color(0x332A9D8F)),
                         ),
                         child: const Text('Ver más', style: TextStyle(color: AppColors.textSecondary)),
                       ),
@@ -176,3 +176,5 @@ class TarjetaClaseGrande extends StatelessWidget {
     );
   }
 }
+
+

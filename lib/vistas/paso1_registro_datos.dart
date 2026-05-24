@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../theme.dart';
 import 'paso2_registro_verificar.dart';
 
@@ -31,7 +31,7 @@ class _Paso1RegistroDatosState extends State<Paso1RegistroDatos> {
                   elevation: 8,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
-                    side: const BorderSide(color: Color(0xFF1E2128)),
+                    side: const BorderSide(color: Color(0x332A9D8F)),
                   ),
                   child: Container(
                     width: 500,
@@ -120,12 +120,12 @@ class _Paso1RegistroDatosState extends State<Paso1RegistroDatos> {
                 color: AppColors.accent,
                 borderRadius: BorderRadius.circular(6),
               ),
-              child: const Icon(Icons.link, color: Colors.black, size: 20),
+              child: const Icon(Icons.link, color: Colors.white, size: 20),
             ),
             const SizedBox(width: 8),
             const Text(
               'IronLink',
-              style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold, letterSpacing: -0.5),
+              style: TextStyle(color: AppColors.textPrimary, fontSize: 20, fontWeight: FontWeight.bold, letterSpacing: -0.5),
             ),
           ],
         ),
@@ -133,7 +133,7 @@ class _Paso1RegistroDatosState extends State<Paso1RegistroDatos> {
         const Text(
           'Crear cuenta',
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white),
+          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: AppColors.textPrimary),
         ),
         const SizedBox(height: 8),
         const Text(
@@ -182,7 +182,7 @@ class _Paso1RegistroDatosState extends State<Paso1RegistroDatos> {
                 value: _acceptedTerms,
                 onChanged: (val) => setState(() => _acceptedTerms = val ?? false),
                 activeColor: AppColors.accent,
-                checkColor: Colors.black,
+                checkColor: Colors.white,
                 side: const BorderSide(color: AppColors.textTertiary),
               ),
             ),
@@ -241,7 +241,7 @@ class _Paso1RegistroDatosState extends State<Paso1RegistroDatos> {
         ),
         const SizedBox(height: 8),
         TextField(
-          style: const TextStyle(color: Colors.white, fontSize: 14),
+          style: const TextStyle(color: AppColors.textPrimary, fontSize: 14),
           decoration: InputDecoration(
             hintText: hint,
             hintStyle: const TextStyle(color: AppColors.textTertiary),
@@ -266,7 +266,7 @@ class _Paso1RegistroDatosState extends State<Paso1RegistroDatos> {
         ),
         const SizedBox(height: 8),
         TextField(
-          style: const TextStyle(color: Colors.white, fontSize: 14),
+          style: const TextStyle(color: AppColors.textPrimary, fontSize: 14),
           obscureText: obscure,
           decoration: InputDecoration(
             hintText: '••••••••',
@@ -309,3 +309,5 @@ class _Paso1RegistroDatosState extends State<Paso1RegistroDatos> {
     );
   }
 }
+
+

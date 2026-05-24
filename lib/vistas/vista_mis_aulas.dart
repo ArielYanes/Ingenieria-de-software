@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../theme.dart';
 import '../componentes/tarjeta_clase_grande.dart';
 
@@ -17,7 +17,7 @@ class VistaMisAulas extends StatelessWidget {
             const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Mis Aulas', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white)),
+                Text('Mis Aulas', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: AppColors.textPrimary)),
                 SizedBox(height: 4),
                 Text('4 materias matriculadas • Ciclo 01-2024', style: TextStyle(color: AppColors.textTertiary, fontSize: 14)),
               ],
@@ -40,7 +40,7 @@ class VistaMisAulas extends StatelessWidget {
             Expanded(
               flex: 2,
               child: TextField(
-                style: const TextStyle(color: Colors.white, fontSize: 14),
+                style: const TextStyle(color: AppColors.textPrimary, fontSize: 14),
                 decoration: InputDecoration(
                   hintText: 'Buscar aula o docente...',
                   hintStyle: const TextStyle(color: AppColors.textTertiary),
@@ -50,11 +50,11 @@ class VistaMisAulas extends StatelessWidget {
                   contentPadding: const EdgeInsets.symmetric(vertical: 0),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: Color(0xFF1E2128)),
+                    borderSide: const BorderSide(color: Color(0x332A9D8F)),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: const BorderSide(color: Color(0xFF1E2128)),
+                    borderSide: const BorderSide(color: Color(0x332A9D8F)),
                   ),
                 ),
               ),
@@ -133,7 +133,7 @@ class VistaMisAulas extends StatelessWidget {
       decoration: BoxDecoration(
         color: isActive ? AppColors.accent.withOpacity(0.1) : AppColors.surface,
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: isActive ? AppColors.accent : const Color(0xFF1E2128)),
+        border: Border.all(color: isActive ? AppColors.accent : const Color(0x332A9D8F)),
       ),
       child: Text(
         label,
@@ -146,3 +146,5 @@ class VistaMisAulas extends StatelessWidget {
     );
   }
 }
+
+

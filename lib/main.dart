@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'vistas/pantalla_login.dart';
 import 'theme.dart';
 
@@ -13,9 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Innovasoft',
-      theme: AppTheme.darkTheme,
+      theme: AppTheme.lightTheme,
       debugShowCheckedModeBanner: false,
       home: const PantallaLogin(),
     );
   }
 }
+

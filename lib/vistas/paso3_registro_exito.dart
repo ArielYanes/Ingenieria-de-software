@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../theme.dart';
 import 'pantalla_dashboard.dart';
 
@@ -22,7 +22,7 @@ class Paso3RegistroExito extends StatelessWidget {
                   elevation: 8,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
-                    side: const BorderSide(color: Color(0xFF1E2128)),
+                    side: const BorderSide(color: Color(0x332A9D8F)),
                   ),
                   child: Container(
                     width: 500,
@@ -111,12 +111,12 @@ class Paso3RegistroExito extends StatelessWidget {
                 color: AppColors.accent,
                 borderRadius: BorderRadius.circular(6),
               ),
-              child: const Icon(Icons.link, color: Colors.black, size: 20),
+              child: const Icon(Icons.link, color: Colors.white, size: 20),
             ),
             const SizedBox(width: 8),
             const Text(
               'IronLink',
-              style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold, letterSpacing: -0.5),
+              style: TextStyle(color: AppColors.textPrimary, fontSize: 20, fontWeight: FontWeight.bold, letterSpacing: -0.5),
             ),
           ],
         ),
@@ -137,7 +137,7 @@ class Paso3RegistroExito extends StatelessWidget {
         const Text(
           '¡Cuenta creada!',
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white),
+          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: AppColors.textPrimary),
         ),
         const SizedBox(height: 8),
         const Text(
@@ -155,11 +155,11 @@ class Paso3RegistroExito extends StatelessWidget {
           child: Column(
             children: [
               _buildDetailRow('NOMBRE', 'Walter Ramírez'),
-              const Divider(color: Color(0xFF2A2D35), height: 32),
+              const Divider(color: Color(0x332A9D8F), height: 32),
               _buildDetailRow('CARNET', 'UGB-2022-0341', valueColor: AppColors.accent),
-              const Divider(color: Color(0xFF2A2D35), height: 32),
+              const Divider(color: Color(0x332A9D8F), height: 32),
               _buildDetailRow('CORREO', 'walter.ramirez@ugb.edu.sv'),
-              const Divider(color: Color(0xFF2A2D35), height: 32),
+              const Divider(color: Color(0x332A9D8F), height: 32),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -193,7 +193,7 @@ class Paso3RegistroExito extends StatelessWidget {
     );
   }
 
-  Widget _buildDetailRow(String label, String value, {Color valueColor = Colors.white}) {
+  Widget _buildDetailRow(String label, String value, {Color valueColor = AppColors.textPrimary}) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -226,3 +226,5 @@ class Paso3RegistroExito extends StatelessWidget {
     );
   }
 }
+
+

@@ -74,19 +74,17 @@ class _PantallaDashboardState extends State<PantallaDashboard> {
   Widget _buildSidebar() {
     return Container(
       width: 250,
-      color: const Color(0xFF13161D),
+      color: AppColors.surface,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 32),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24.0),
-            child: Row(
-              children: [
-                Icon(Icons.link, color: AppColors.accent, size: 24),
-                SizedBox(width: 8),
-                Text('IronLink', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
-              ],
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            child: Image.asset(
+              'assets/logo.png',
+              height: 64,
+              fit: BoxFit.contain,
             ),
           ),
           const SizedBox(height: 48),
@@ -159,20 +157,20 @@ class _PantallaDashboardState extends State<PantallaDashboard> {
       padding: const EdgeInsets.symmetric(horizontal: 24.0),
       decoration: const BoxDecoration(
         color: AppColors.background,
-        border: Border(bottom: BorderSide(color: Color(0xFF1A1D24))),
+        border: Border(bottom: BorderSide(color: Color(0x332A9D8F))),
       ),
       child: Row(
         children: [
           if (MediaQuery.of(context).size.width <= 800)
             IconButton(
-              icon: const Icon(Icons.menu, color: Colors.white),
+              icon: const Icon(Icons.menu, color: AppColors.textPrimary),
               onPressed: () => Scaffold.of(context).openDrawer(),
             ),
           
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
             decoration: BoxDecoration(
-              color: const Color(0xFF0F1A15),
+              color: AppColors.surface,
               borderRadius: BorderRadius.circular(16),
               border: Border.all(color: AppColors.accentDark.withOpacity(0.5)),
             ),
@@ -215,7 +213,7 @@ class _PantallaDashboardState extends State<PantallaDashboard> {
               shape: BoxShape.circle,
             ),
             child: const Center(
-              child: Text('WR', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+              child: Text('WR', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
             ),
           ),
         ],
@@ -223,3 +221,5 @@ class _PantallaDashboardState extends State<PantallaDashboard> {
     );
   }
 }
+
+

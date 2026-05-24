@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../theme.dart';
 import 'vista_sala_clase.dart';
 
@@ -40,7 +40,7 @@ class VistaUnirseClase extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(32),
           decoration: BoxDecoration(
-            color: const Color(0xFF131A1D), // Un poco verde muy oscuro
+            color: AppColors.surface, // Un poco verde muy oscuro
             borderRadius: BorderRadius.circular(16),
             border: Border.all(color: AppColors.accent.withOpacity(0.3)),
           ),
@@ -69,18 +69,18 @@ class VistaUnirseClase extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 24),
-              const Text('Redes III — Protocolos TCP/IP', style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold)),
+              const Text('Redes III — Protocolos TCP/IP', style: TextStyle(color: AppColors.textPrimary, fontSize: 24, fontWeight: FontWeight.bold)),
               const SizedBox(height: 8),
               const Text('Ing. Mena • Iniciada a las 10:00 AM • Ciclo 01-2026', style: TextStyle(color: AppColors.textSecondary, fontSize: 14)),
               const SizedBox(height: 32),
               
               Row(
                 children: [
-                  Expanded(child: _buildStatItem('32', 'CONECTADOS', Colors.white)),
-                  Container(width: 1, height: 40, color: const Color(0xFF1E2128)),
+                  Expanded(child: _buildStatItem('32', 'CONECTADOS', AppColors.textPrimary)),
+                  Container(width: 1, height: 40, color: const Color(0x332A9D8F)),
                   Expanded(child: _buildStatItem('38ms', 'LATENCIA VPN', AppColors.accent)),
-                  Container(width: 1, height: 40, color: const Color(0xFF1E2128)),
-                  Expanded(child: _buildStatItem('47min', 'TRANSCURRIDO', Colors.white)),
+                  Container(width: 1, height: 40, color: const Color(0x332A9D8F)),
+                  Expanded(child: _buildStatItem('47min', 'TRANSCURRIDO', AppColors.textPrimary)),
                 ],
               ),
               const SizedBox(height: 32),
@@ -102,9 +102,9 @@ class VistaUnirseClase extends StatelessWidget {
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.cast_for_education, color: Colors.black, size: 24),
+                      Icon(Icons.cast_for_education, color: Colors.white, size: 24),
                       SizedBox(width: 12),
-                      Text('Unirse a Redes III →', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold)),
+                      Text('Unirse a Redes III →', style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)),
                     ],
                   ),
                 ),
@@ -146,7 +146,7 @@ class VistaUnirseClase extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: isLive ? AppColors.accent.withOpacity(0.5) : const Color(0xFF1E2128)),
+        border: Border.all(color: isLive ? AppColors.accent.withOpacity(0.5) : const Color(0x332A9D8F)),
       ),
       child: Row(
         children: [
@@ -163,7 +163,7 @@ class VistaUnirseClase extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold)),
+                Text(title, style: const TextStyle(color: AppColors.textPrimary, fontSize: 15, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 4),
                 Text(subtitle, style: const TextStyle(color: AppColors.textTertiary, fontSize: 12)),
               ],
@@ -194,7 +194,7 @@ class VistaUnirseClase extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.surface,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: const Color(0xFF1E2128)),
+            border: Border.all(color: const Color(0x332A9D8F)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -203,7 +203,7 @@ class VistaUnirseClase extends StatelessWidget {
                 children: [
                   Icon(Icons.key, color: Colors.amber, size: 20),
                   SizedBox(width: 8),
-                  Text('Unirse por código', style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold)),
+                  Text('Unirse por código', style: TextStyle(color: AppColors.textPrimary, fontSize: 14, fontWeight: FontWeight.bold)),
                 ],
               ),
               const SizedBox(height: 8),
@@ -232,7 +232,7 @@ class VistaUnirseClase extends StatelessWidget {
                         backgroundColor: AppColors.accent,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                       ),
-                      child: const Text('Entrar', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+                      child: const Text('Entrar', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                     ),
                   ),
                 ],
@@ -248,7 +248,7 @@ class VistaUnirseClase extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.surface,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: const Color(0xFF1E2128)),
+            border: Border.all(color: const Color(0x332A9D8F)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -260,7 +260,7 @@ class VistaUnirseClase extends StatelessWidget {
                     children: [
                       Icon(Icons.security, color: Colors.redAccent, size: 20),
                       SizedBox(width: 8),
-                      Text('Estado del Túnel', style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold)),
+                      Text('Estado del Túnel', style: TextStyle(color: AppColors.textPrimary, fontSize: 14, fontWeight: FontWeight.bold)),
                     ],
                   ),
                   Row(
@@ -274,11 +274,11 @@ class VistaUnirseClase extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               _buildDetailRow('Nodo activo', 'UGB-NODE-01', AppColors.textSecondary),
-              const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0xFF1E2128), height: 1)),
+              const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0x332A9D8F), height: 1)),
               _buildDetailRow('Latencia', '38 ms', AppColors.accent),
-              const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0xFF1E2128), height: 1)),
-              _buildDetailRow('Ancho de banda', '1.2 MB/s', Colors.white),
-              const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0xFF1E2128), height: 1)),
+              const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0x332A9D8F), height: 1)),
+              _buildDetailRow('Ancho de banda', '1.2 MB/s', AppColors.textPrimary),
+              const Padding(padding: EdgeInsets.symmetric(vertical: 12), child: Divider(color: Color(0x332A9D8F), height: 1)),
               _buildDetailRow('Cifrado', 'AES-256-GCM', AppColors.textSecondary),
             ],
           ),
@@ -291,7 +291,7 @@ class VistaUnirseClase extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.surface,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: const Color(0xFF1E2128)),
+            border: Border.all(color: const Color(0x332A9D8F)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -333,7 +333,7 @@ class VistaUnirseClase extends StatelessWidget {
             shape: BoxShape.circle,
           ),
           child: const Center(
-            child: Icon(Icons.check, color: Colors.black, size: 10),
+            child: Icon(Icons.check, color: Colors.white, size: 10),
           ),
         ),
         const SizedBox(width: 12),
@@ -342,3 +342,5 @@ class VistaUnirseClase extends StatelessWidget {
     );
   }
 }
+
+

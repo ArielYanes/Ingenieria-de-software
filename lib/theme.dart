@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  // Fondos
-  static const Color background = Color(0xFF0A0C10); // Fondo general super oscuro
-  static const Color surface = Color(0xFF13151A); // Tarjetas y paneles
-  static const Color surfaceLight = Color(0xFF1C1F26); // Campos de texto
+  // Fondos - Nuevo Tema Claro
+  static const Color background = Color(0xFFB5E2FA); // Azul Claro
+  static const Color surface = Color(0xFFF9F7F3); // Crema / Blanco Roto
+  static const Color surfaceLight = Color(0xFFFFFFFF); // Blanco puro para campos
 
   // Acentos
-  static const Color accent = Color(0xFF00FA9A); // Verde brillante / Medium Spring Green
-  static const Color accentDark = Color(0xFF008A5E);
-  static const Color warning = Color(0xFFFFB300); // Para alertas (ej. clase en 5 min)
+  static const Color accent = Color(0xFF0FA3B1); // Turquesa
+  static const Color accentDark = Color(0xFF2A9D8F); // Verde Azulado
+  static const Color warning = Color(0xFFFFB300); // Para alertas
 
-  // Textos
-  static const Color textPrimary = Colors.white;
-  static const Color textSecondary = Colors.white70;
-  static const Color textTertiary = Colors.white54;
+  // Textos (Oscuros para contraste en fondo claro)
+  static const Color textPrimary = Color(0xFF264653); // Pizarra Oscuro
+  static const Color textSecondary = Color(0xB2264653); // Pizarra Oscuro 70% opacidad
+  static const Color textTertiary = Color(0x7F264653); // Pizarra Oscuro 50% opacidad
 }
 
 class AppTheme {
-  static ThemeData get darkTheme {
+  static ThemeData get lightTheme {
     return ThemeData(
-      brightness: Brightness.dark,
+      brightness: Brightness.light,
       scaffoldBackgroundColor: AppColors.background,
-      colorScheme: const ColorScheme.dark(
+      colorScheme: const ColorScheme.light(
         primary: AppColors.accent,
         surface: AppColors.surface,
         background: AppColors.background,
@@ -50,7 +50,7 @@ class AppTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.accent,
-          foregroundColor: Colors.black87, // Texto oscuro en botón verde
+          foregroundColor: Colors.white, // Texto blanco en botón turquesa
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),

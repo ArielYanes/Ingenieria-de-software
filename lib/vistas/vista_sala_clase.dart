@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../theme.dart';
 
 class VistaSalaClase extends StatefulWidget {
@@ -20,7 +20,7 @@ class _VistaSalaClaseState extends State<VistaSalaClase> {
             child: Row(
               children: [
                 Expanded(flex: 75, child: _buildMainArea()),
-                Container(width: 1, color: const Color(0xFF1E2128)),
+                Container(width: 1, color: const Color(0x332A9D8F)),
                 Expanded(flex: 25, child: _buildSidebar()),
               ],
             ),
@@ -36,14 +36,14 @@ class _VistaSalaClaseState extends State<VistaSalaClase> {
       padding: const EdgeInsets.symmetric(horizontal: 24),
       decoration: const BoxDecoration(
         color: AppColors.surface,
-        border: Border(bottom: BorderSide(color: Color(0xFF1E2128))),
+        border: Border(bottom: BorderSide(color: Color(0x332A9D8F))),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             children: [
-              const Text('IronLink', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold, letterSpacing: -0.5)),
+              const Text('IronLink', style: TextStyle(color: AppColors.textPrimary, fontSize: 18, fontWeight: FontWeight.bold, letterSpacing: -0.5)),
               const SizedBox(width: 24),
               const Text('Redes III • TCP/IP', style: TextStyle(color: AppColors.textSecondary, fontSize: 14)),
               const SizedBox(width: 16),
@@ -83,7 +83,7 @@ class _VistaSalaClaseState extends State<VistaSalaClase> {
 
   Widget _buildMainArea() {
     return Container(
-      color: const Color(0xFF0D1117), // Fondo más oscuro para el área principal
+      color: AppColors.background, // Fondo más oscuro para el área principal
       padding: const EdgeInsets.all(24),
       child: Stack(
         children: [
@@ -93,16 +93,16 @@ class _VistaSalaClaseState extends State<VistaSalaClase> {
               width: 800,
               height: 500,
               decoration: BoxDecoration(
-                color: const Color(0xFF161B22), // Fondo de la presentación
+                color: AppColors.surface, // Fondo de la presentación
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: const Color(0xFF1E2128)),
+                border: Border.all(color: const Color(0x332A9D8F)),
               ),
               child: Column(
                 children: [
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     decoration: const BoxDecoration(
-                      color: Color(0xFF1E2128),
+                      color: Color(0x332A9D8F),
                       borderRadius: BorderRadius.only(bottomLeft: Radius.circular(8), bottomRight: Radius.circular(8)),
                     ),
                     child: const Row(
@@ -161,7 +161,7 @@ class _VistaSalaClaseState extends State<VistaSalaClase> {
                   height: 80,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: const Color(0xFF1E2128),
+                    color: const Color(0x332A9D8F),
                     border: Border.all(color: AppColors.accent, width: 2),
                   ),
                   child: const Center(child: Icon(Icons.person, color: AppColors.textTertiary, size: 40)), // Placeholder avatar
@@ -170,14 +170,14 @@ class _VistaSalaClaseState extends State<VistaSalaClase> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.7),
+                    color: Colors.white.withOpacity(0.7),
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: const Row(
                     children: [
                       Icon(Icons.circle, color: AppColors.accent, size: 8),
                       SizedBox(width: 6),
-                      Text('Ing. Ludwin - Docente', style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold)),
+                      Text('Ing. Ludwin - Docente', style: TextStyle(color: AppColors.textPrimary, fontSize: 12, fontWeight: FontWeight.bold)),
                     ],
                   ),
                 ),
@@ -228,7 +228,7 @@ class _VistaSalaClaseState extends State<VistaSalaClase> {
   }
 
   Widget _buildControlBtn(IconData icon, String label, bool isActive, {Color? color, bool isCircle = true}) {
-    final bgColor = isActive ? (color ?? AppColors.accent).withOpacity(0.1) : const Color(0xFF1E2128);
+    final bgColor = isActive ? (color ?? AppColors.accent).withOpacity(0.1) : const Color(0x332A9D8F);
     final iconColor = isActive ? (color ?? AppColors.accent) : AppColors.textTertiary;
 
     return Column(
@@ -259,7 +259,7 @@ class _VistaSalaClaseState extends State<VistaSalaClase> {
           Container(
             height: 60,
             decoration: const BoxDecoration(
-              border: Border(bottom: BorderSide(color: Color(0xFF1E2128))),
+              border: Border(bottom: BorderSide(color: Color(0x332A9D8F))),
             ),
             child: Row(
               children: [
@@ -319,8 +319,8 @@ class _VistaSalaClaseState extends State<VistaSalaClase> {
             flex: 40,
             child: Container(
               decoration: const BoxDecoration(
-                color: Color(0xFF0F1116),
-                border: Border(top: BorderSide(color: Color(0xFF1E2128))),
+                color: AppColors.surface,
+                border: Border(top: BorderSide(color: Color(0x332A9D8F))),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -352,9 +352,9 @@ class _VistaSalaClaseState extends State<VistaSalaClase> {
                             height: 40,
                             padding: const EdgeInsets.symmetric(horizontal: 16),
                             decoration: BoxDecoration(
-                              color: const Color(0xFF1A1C23),
+                              color: AppColors.surfaceLight,
                               borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: const Color(0xFF2A2D35)),
+                              border: Border.all(color: const Color(0x332A9D8F)),
                             ),
                             child: const Align(
                               alignment: Alignment.centerLeft,
@@ -370,7 +370,7 @@ class _VistaSalaClaseState extends State<VistaSalaClase> {
                             color: AppColors.accent,
                             shape: BoxShape.circle,
                           ),
-                          child: const Icon(Icons.send, color: Colors.black, size: 18),
+                          child: const Icon(Icons.send, color: Colors.white, size: 18),
                         ),
                       ],
                     ),
@@ -394,11 +394,11 @@ class _VistaSalaClaseState extends State<VistaSalaClase> {
             height: 32,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: isSpeaking ? AppColors.accent.withOpacity(0.2) : const Color(0xFF1E2128),
+              color: isSpeaking ? AppColors.accent.withOpacity(0.2) : const Color(0x332A9D8F),
               border: Border.all(color: isSpeaking ? AppColors.accent : Colors.transparent),
             ),
             child: Center(
-              child: Text(name[0], style: TextStyle(color: isSpeaking ? AppColors.accent : Colors.white, fontWeight: FontWeight.bold)),
+              child: Text(name[0], style: TextStyle(color: isSpeaking ? AppColors.accent : AppColors.textPrimary, fontWeight: FontWeight.bold)),
             ),
           ),
           const SizedBox(width: 12),
@@ -406,7 +406,7 @@ class _VistaSalaClaseState extends State<VistaSalaClase> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(name, style: TextStyle(color: isSpeaking ? AppColors.accent : Colors.white, fontSize: 13, fontWeight: FontWeight.bold)),
+                Text(name, style: TextStyle(color: isSpeaking ? AppColors.accent : AppColors.textPrimary, fontSize: 13, fontWeight: FontWeight.bold)),
                 Text(status, style: TextStyle(color: isSpeaking ? AppColors.accent.withOpacity(0.8) : AppColors.textTertiary, fontSize: 11)),
               ],
             ),
@@ -423,8 +423,10 @@ class _VistaSalaClaseState extends State<VistaSalaClase> {
       children: [
         Text(name, style: TextStyle(color: nameColor, fontSize: 12, fontWeight: FontWeight.bold)),
         const SizedBox(height: 2),
-        Text(message, style: const TextStyle(color: Colors.white, fontSize: 13)),
+        Text(message, style: const TextStyle(color: AppColors.textPrimary, fontSize: 13)),
       ],
     );
   }
 }
+
+

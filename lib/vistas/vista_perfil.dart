@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../theme.dart';
 
 class VistaPerfil extends StatelessWidget {
@@ -47,15 +47,15 @@ class VistaPerfil extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Mi Perfil', style: TextStyle(color: Colors.white, fontSize: 32, fontWeight: FontWeight.bold)),
+            const Text('Mi Perfil', style: TextStyle(color: AppColors.textPrimary, fontSize: 32, fontWeight: FontWeight.bold)),
             const SizedBox(height: 8),
             const Text('Ciclo 01-2026 • UGB Campus Central', style: TextStyle(color: AppColors.textSecondary, fontSize: 14)),
           ],
         ),
         ElevatedButton.icon(
           onPressed: () {},
-          icon: const Icon(Icons.edit, color: Colors.black, size: 18),
-          label: const Text('Editar perfil', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+          icon: const Icon(Icons.edit, color: Colors.white, size: 18),
+          label: const Text('Editar perfil', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColors.accent,
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
@@ -76,7 +76,7 @@ class VistaPerfil extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.surface,
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: const Color(0xFF1E2128)),
+            border: Border.all(color: const Color(0x332A9D8F)),
           ),
           child: Column(
             children: [
@@ -92,13 +92,13 @@ class VistaPerfil extends StatelessWidget {
                       shape: BoxShape.circle,
                     ),
                     child: const Center(
-                      child: Text('WR', style: TextStyle(color: Colors.black, fontSize: 40, fontWeight: FontWeight.bold)),
+                      child: Text('WR', style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold)),
                     ),
                   ),
                   Container(
                     padding: const EdgeInsets.all(6),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF1E2128),
+                      color: const Color(0x332A9D8F),
                       shape: BoxShape.circle,
                       border: Border.all(color: AppColors.surface, width: 3),
                     ),
@@ -107,7 +107,7 @@ class VistaPerfil extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 24),
-              const Text('Walter Ramírez', style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold)),
+              const Text('Walter Ramírez', style: TextStyle(color: AppColors.textPrimary, fontSize: 24, fontWeight: FontWeight.bold)),
               const SizedBox(height: 8),
               const Text('Estudiante • Ing. en Sistemas', style: TextStyle(color: AppColors.accent, fontSize: 14, fontWeight: FontWeight.bold)),
               const SizedBox(height: 4),
@@ -118,10 +118,10 @@ class VistaPerfil extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  _buildMetric('4', 'AULAS', Colors.white),
-                  Container(width: 1, height: 40, color: const Color(0xFF1E2128)),
-                  _buildMetric('39', 'CLASES', Colors.white),
-                  Container(width: 1, height: 40, color: const Color(0xFF1E2128)),
+                  _buildMetric('4', 'AULAS', AppColors.textPrimary),
+                  Container(width: 1, height: 40, color: const Color(0x332A9D8F)),
+                  _buildMetric('39', 'CLASES', AppColors.textPrimary),
+                  Container(width: 1, height: 40, color: const Color(0x332A9D8F)),
                   _buildMetric('94%', 'ASIST.', AppColors.accent),
                 ],
               ),
@@ -156,7 +156,7 @@ class VistaPerfil extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFF1E2128)),
+        border: Border.all(color: const Color(0x332A9D8F)),
       ),
       child: Row(
         children: [
@@ -166,7 +166,7 @@ class VistaPerfil extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold)),
+                Text(title, style: const TextStyle(color: AppColors.textPrimary, fontSize: 14, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 4),
                 Text(subtitle, style: const TextStyle(color: AppColors.textTertiary, fontSize: 11)),
               ],
@@ -187,7 +187,7 @@ class VistaPerfil extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.surface,
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: const Color(0xFF1E2128)),
+            border: Border.all(color: const Color(0x332A9D8F)),
           ),
           child: Column(
             children: [
@@ -198,7 +198,7 @@ class VistaPerfil extends StatelessWidget {
                   OutlinedButton(
                     onPressed: () {},
                     style: OutlinedButton.styleFrom(
-                      side: const BorderSide(color: Color(0xFF2A2D35)),
+                      side: const BorderSide(color: Color(0x332A9D8F)),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                     ),
                     child: const Text('Editar', style: TextStyle(color: AppColors.textSecondary, fontSize: 12)),
@@ -247,7 +247,7 @@ class VistaPerfil extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.surface,
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: const Color(0xFF1E2128)),
+            border: Border.all(color: const Color(0x332A9D8F)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -261,11 +261,11 @@ class VistaPerfil extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               _buildActivityItem('Asistió a Redes III', 'Protocolos TCP/IP • VRT-301 • 1h 20min', 'Hoy 10:00', AppColors.accent, Icons.wifi),
-              const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0xFF1E2128), height: 1)),
+              const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0x332A9D8F), height: 1)),
               _buildActivityItem('Asistió a Seguridad Informática', 'Criptografía asimétrica • VRT-108 • 1h 30min', 'Vie 14:00', Colors.purpleAccent, Icons.security),
-              const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0xFF1E2128), height: 1)),
+              const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0x332A9D8F), height: 1)),
               _buildActivityItem('Asistió a Redes III', 'Ruteo dinámico OSPF • VRT-301 • 1h 32min', 'Vie 10:00', AppColors.accent, Icons.wifi),
-              const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0xFF1E2128), height: 1)),
+              const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider(color: Color(0x332A9D8F), height: 1)),
               _buildActivityItem('Asistió a Base de Datos II', 'Optimización de consultas • VRT-402 • 2h', 'Jue 07:00', Colors.orangeAccent, Icons.storage),
             ],
           ),
@@ -279,10 +279,10 @@ class VistaPerfil extends StatelessWidget {
               child: OutlinedButton.icon(
                 onPressed: () {},
                 icon: const Icon(Icons.key, color: Colors.amber, size: 18),
-                label: const Text('Cambiar contraseña', style: TextStyle(color: Colors.white)),
+                label: const Text('Cambiar contraseña', style: TextStyle(color: AppColors.textPrimary)),
                 style: OutlinedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(vertical: 16),
-                  side: const BorderSide(color: Color(0xFF2A2D35)),
+                  side: const BorderSide(color: Color(0x332A9D8F)),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                 ),
               ),
@@ -304,7 +304,7 @@ class VistaPerfil extends StatelessWidget {
     );
   }
 
-  Widget _buildInfoField(String label, String value, {Color valueColor = Colors.white}) {
+  Widget _buildInfoField(String label, String value, {Color valueColor = AppColors.textPrimary}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -331,7 +331,7 @@ class VistaPerfil extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title, style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold)),
+              Text(title, style: const TextStyle(color: AppColors.textPrimary, fontSize: 14, fontWeight: FontWeight.bold)),
               const SizedBox(height: 4),
               Text(subtitle, style: const TextStyle(color: AppColors.textTertiary, fontSize: 12)),
             ],
@@ -342,3 +342,5 @@ class VistaPerfil extends StatelessWidget {
     );
   }
 }
+
+

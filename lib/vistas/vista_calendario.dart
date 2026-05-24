@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../theme.dart';
 
 class VistaCalendario extends StatelessWidget {
@@ -43,7 +43,7 @@ class VistaCalendario extends StatelessWidget {
               children: [
                 _buildNavButton(Icons.chevron_left),
                 const SizedBox(width: 16),
-                const Text('Abril 2026', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
+                const Text('Abril 2026', style: TextStyle(color: AppColors.textPrimary, fontSize: 20, fontWeight: FontWeight.bold)),
                 const SizedBox(width: 16),
                 _buildNavButton(Icons.chevron_right),
               ],
@@ -64,7 +64,7 @@ class VistaCalendario extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.surface,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: const Color(0xFF1E2128)),
+            border: Border.all(color: const Color(0x332A9D8F)),
           ),
           child: Column(
             children: [
@@ -81,7 +81,7 @@ class VistaCalendario extends StatelessWidget {
                   )).toList(),
                 ),
               ),
-              const Divider(color: Color(0xFF1E2128), height: 1),
+              const Divider(color: Color(0x332A9D8F), height: 1),
               // Grid
               _buildMonthGrid(),
             ],
@@ -98,7 +98,7 @@ class VistaCalendario extends StatelessWidget {
         color: AppColors.surfaceLight,
         borderRadius: BorderRadius.circular(8),
       ),
-      child: Icon(icon, color: Colors.white, size: 20),
+      child: Icon(icon, color: AppColors.textPrimary, size: 20),
     );
   }
 
@@ -181,8 +181,8 @@ class VistaCalendario extends StatelessWidget {
               constraints: const BoxConstraints(minHeight: 120),
               decoration: BoxDecoration(
                 border: Border(
-                  top: const BorderSide(color: Color(0xFF1E2128)),
-                  right: day != days.last ? const BorderSide(color: Color(0xFF1E2128)) : BorderSide.none,
+                  top: const BorderSide(color: Color(0x332A9D8F)),
+                  right: day != days.last ? const BorderSide(color: Color(0x332A9D8F)) : BorderSide.none,
                 ),
               ),
               padding: const EdgeInsets.all(8),
@@ -200,7 +200,7 @@ class VistaCalendario extends StatelessWidget {
                       child: Text(
                         day,
                         style: TextStyle(
-                          color: isToday ? Colors.black : (isMuted ? AppColors.textTertiary.withOpacity(0.5) : AppColors.textSecondary),
+                          color: isToday ? Colors.white : (isMuted ? AppColors.textTertiary.withOpacity(0.5) : AppColors.textSecondary),
                           fontWeight: isToday ? FontWeight.bold : FontWeight.normal,
                           fontSize: 13,
                         ),
@@ -258,7 +258,7 @@ class VistaCalendario extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.surface,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: const Color(0xFF1E2128)),
+            border: Border.all(color: const Color(0x332A9D8F)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -279,7 +279,7 @@ class VistaCalendario extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.surface,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: const Color(0xFF1E2128)),
+            border: Border.all(color: const Color(0x332A9D8F)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -315,7 +315,7 @@ class VistaCalendario extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.surface,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: const Color(0xFF1E2128)),
+            border: Border.all(color: const Color(0x332A9D8F)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -354,7 +354,7 @@ class VistaCalendario extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title, style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold)),
+              Text(title, style: const TextStyle(color: AppColors.textPrimary, fontSize: 14, fontWeight: FontWeight.bold)),
               const SizedBox(height: 4),
               Text(subtitle, style: const TextStyle(color: AppColors.textTertiary, fontSize: 12)),
             ],
@@ -372,7 +372,7 @@ class VistaCalendario extends StatelessWidget {
           width: 16,
           height: height,
           decoration: BoxDecoration(
-            color: isToday ? AppColors.accent : const Color(0xFF1E2128),
+            color: isToday ? AppColors.accent : const Color(0x332A9D8F),
             borderRadius: const BorderRadius.vertical(top: Radius.circular(2)),
           ),
         ),
@@ -409,3 +409,5 @@ class _CalendarEvent {
 
   _CalendarEvent({required this.day, required this.title, required this.type});
 }
+
+

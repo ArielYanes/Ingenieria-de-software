@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../theme.dart';
 import 'paso3_registro_exito.dart';
 
@@ -22,7 +22,7 @@ class Paso2RegistroVerificar extends StatelessWidget {
                   elevation: 8,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
-                    side: const BorderSide(color: Color(0xFF1E2128)),
+                    side: const BorderSide(color: Color(0x332A9D8F)),
                   ),
                   child: Container(
                     width: 500,
@@ -111,12 +111,12 @@ class Paso2RegistroVerificar extends StatelessWidget {
                 color: AppColors.accent,
                 borderRadius: BorderRadius.circular(6),
               ),
-              child: const Icon(Icons.link, color: Colors.black, size: 20),
+              child: const Icon(Icons.link, color: Colors.white, size: 20),
             ),
             const SizedBox(width: 8),
             const Text(
               'IronLink',
-              style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold, letterSpacing: -0.5),
+              style: TextStyle(color: AppColors.textPrimary, fontSize: 20, fontWeight: FontWeight.bold, letterSpacing: -0.5),
             ),
           ],
         ),
@@ -134,7 +134,7 @@ class Paso2RegistroVerificar extends StatelessWidget {
         const Text(
           'Verifica tu correo',
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white),
+          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: AppColors.textPrimary),
         ),
         const SizedBox(height: 8),
         RichText(
@@ -152,9 +152,9 @@ class Paso2RegistroVerificar extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: const Color(0xFF0F1A24),
+            color: AppColors.surface,
             borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: const Color(0xFF162B3D)),
+            border: Border.all(color: const Color(0x332A9D8F)),
           ),
           child: const Text(
             'El código fue enviado a tu correo @ugb.edu.sv. Revisa también tu carpeta de spam. El código expira en 10 minutos.',
@@ -252,3 +252,5 @@ class Paso2RegistroVerificar extends StatelessWidget {
     );
   }
 }
+
+

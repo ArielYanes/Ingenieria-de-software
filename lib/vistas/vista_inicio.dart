@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import '../theme.dart';
 import '../componentes/tarjeta_clase_pequena.dart';
 import 'vista_sala_clase.dart';
@@ -32,9 +32,9 @@ class VistaInicio extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
       decoration: BoxDecoration(
-        color: const Color(0xFF2A1C0A),
+        color: AppColors.surface,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFF4A3212)),
+        border: Border.all(color: const Color(0x332A9D8F)),
       ),
       child: Row(
         children: [
@@ -60,9 +60,9 @@ class VistaInicio extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
-        color: const Color(0xFF0F1A18),
+        color: AppColors.surface,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFF163028)),
+        border: Border.all(color: const Color(0x332A9D8F)),
       ),
       child: Row(
         children: [
@@ -80,7 +80,7 @@ class VistaInicio extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text('Redes III — Protocolos TCP/IP', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
+                const Text('Redes III — Protocolos TCP/IP', style: TextStyle(color: AppColors.textPrimary, fontSize: 18, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
                 Text('Ing. Mena • VRT-301 • 32 conectados', style: TextStyle(color: AppColors.textTertiary, fontSize: 13)),
               ],
@@ -137,7 +137,7 @@ class VistaInicio extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFF1E2128)),
+        border: Border.all(color: const Color(0x332A9D8F)),
       ),
       child: Column(
         children: [
@@ -146,20 +146,20 @@ class VistaInicio extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('Notificaciones', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                const Text('Notificaciones', style: TextStyle(color: AppColors.textPrimary, fontWeight: FontWeight.bold)),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(color: AppColors.accent, borderRadius: BorderRadius.circular(12)),
-                  child: const Text('2', style: TextStyle(color: Colors.black, fontSize: 12, fontWeight: FontWeight.bold)),
+                  child: const Text('2', style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold)),
                 ),
               ],
             ),
           ),
-          const Divider(height: 1, color: Color(0xFF1E2128)),
+          const Divider(height: 1, color: Color(0x332A9D8F)),
           _buildNotificationItem('Redes III comienza en 5 min', '09:55 AM', isUnread: true, color: AppColors.warning),
-          const Divider(height: 1, color: Color(0xFF1E2128)),
+          const Divider(height: 1, color: Color(0x332A9D8F)),
           _buildNotificationItem('Ing. Flores inició Sistemas Operativos', '08:02 AM', isUnread: true, color: Colors.purple),
-          const Divider(height: 1, color: Color(0xFF1E2128)),
+          const Divider(height: 1, color: Color(0x332A9D8F)),
           _buildNotificationItem('Tarea de BD II actualizada', 'Ayer, 04:30 PM', isUnread: false, color: Colors.blue),
         ],
       ),
@@ -182,7 +182,7 @@ class VistaInicio extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: TextStyle(color: isUnread ? Colors.white : AppColors.textSecondary, fontWeight: isUnread ? FontWeight.bold : FontWeight.normal)),
+                Text(title, style: TextStyle(color: isUnread ? AppColors.textPrimary : AppColors.textSecondary, fontWeight: isUnread ? FontWeight.bold : FontWeight.normal)),
                 const SizedBox(height: 4),
                 Text(time, style: const TextStyle(color: AppColors.textTertiary, fontSize: 12)),
               ],
@@ -193,3 +193,5 @@ class VistaInicio extends StatelessWidget {
     );
   }
 }
+
+
